@@ -34,15 +34,7 @@
 				<div class="detail-wrapper clearfix">
 					<div class="detail-main">
 						<h1 class="name">{{seller.name}}</h1> 
-						<div class="star-wrapper">
-							<div class="star star-48">
-								<span class="star-item on"></span>
-								<span class="star-item on"></span>
-								<span class="star-item on"></span>
-								<span class="star-item on"></span>
-								<span class="star-item off"></span>
-							</div>
-						</div> 
+						<star v-bind:size="48" v-bind:rateNum="seller.score"></star>
 						<div class="title">
 							<div class="line"></div> 
 							<div class="text">优惠信息</div> 
@@ -74,6 +66,7 @@
 </template>
 
 <script>
+	import star from '##/star/star';
 	export default {
 		name: '',
 		props: {
@@ -89,6 +82,7 @@
 		methods: {
 			showDetail () {
 				this.detailShow = true;
+				console.log(this.seller);
 			},
 			hideDetail () {
 				this.detailShow = false;
@@ -98,7 +92,7 @@
 
 		},
 		components: {
-
+			star: star
 		},
 		created () {
 			this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
