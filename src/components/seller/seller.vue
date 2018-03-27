@@ -1,6 +1,6 @@
 <template>
 	<div>
-		我是 goods
+		我是 seller
 	</div>
 </template>
 
