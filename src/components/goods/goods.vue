@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div v-on:click="linkTo">
 		我是 goods
 	</div>
 </template>
@@ -14,6 +14,11 @@
 		},
 		computed: {
 
+		},
+		methods: {
+			linkTo () {
+				this.$router.push('seller');
+			}
 		},
 		components: {
 

@@ -82,7 +82,6 @@
 		methods: {
 			showDetail () {
 				this.detailShow = true;
-				console.log(this.seller);
 			},
 			hideDetail () {
 				this.detailShow = false;
